@@ -10,7 +10,7 @@ Sample input and output
  */
 
 func challenge2(input: String) -> Bool {
-    return input.lowercased().characters.reversed().flatMap { $0 } == input.lowercased().characters.flatMap { $0 }
+    return input.lowercased().characters.reversed() == Array(input.lowercased().characters)
 }
 
 assert(challenge2(input: "rotator") == true, "Challenge2 failed")
